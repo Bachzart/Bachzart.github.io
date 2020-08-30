@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-08-29T15:54:28.260Z</updated>
+  <updated>2020-08-30T12:38:34.095Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://bachzart.github.io/2020/08/29/Prologue%EF%BC%88%E3%83%97%E3%83%AD%E3%83%AD%E3%83%BC%E3%82%B0%20-%20%E6%8A%BC%E5%B0%BE%E3%82%B3%E3%83%BC%E3%82%BF%E3%83%AD%E3%83%BC%EF%BC%89-%20%E7%BF%BB%E5%BC%B9/"/>
     <id>http://bachzart.github.io/2020/08/29/Prologue（プロローグ - 押尾コータロー）- 翻弹/</id>
     <published>2020-08-29T08:59:19.000Z</published>
-    <updated>2020-08-29T15:54:28.260Z</updated>
+    <updated>2020-08-30T12:38:34.095Z</updated>
     
     <summary type="html">
     
@@ -40,6 +40,8 @@
     
       <category term="Guitar" scheme="http://bachzart.github.io/tags/Guitar/"/>
     
+      <category term="Music" scheme="http://bachzart.github.io/tags/Music/"/>
+    
   </entry>
   
   <entry>
@@ -47,12 +49,12 @@
     <link href="http://bachzart.github.io/2020/08/28/ZJU-DS-07-%E5%9B%BE%EF%BC%88%E4%B8%AD%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/28/ZJU-DS-07-图（中）/</id>
     <published>2020-08-28T12:10:40.000Z</published>
-    <updated>2020-08-28T13:17:19.784Z</updated>
+    <updated>2020-08-30T16:14:13.022Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本周课程主要包括图论中最短路径的问题和有关树的习题课。&lt;/p&gt;
+&lt;p&gt;本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>

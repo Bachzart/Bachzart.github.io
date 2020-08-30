@@ -139,19 +139,22 @@
 
 
 
-  <meta name="description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课。">
+  <meta name="description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。">
 <meta name="keywords" content="ZJU_DS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZJU_DS_07-图（中）">
 <meta property="og:url" content="http://bachzart.github.io/2020/08/28/ZJU-DS-07-图（中）/index.html">
 <meta property="og:site_name" content="Bachzart&#39;s Blog">
-<meta property="og:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课。">
+<meta property="og:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_1.png">
-<meta property="og:updated_time" content="2020-08-28T13:17:19.784Z">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_2.png">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_3.png">
+<meta property="og:updated_time" content="2020-08-30T16:14:13.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZJU_DS_07-图（中）">
-<meta name="twitter:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课。">
+<meta name="twitter:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。">
 <meta name="twitter:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_1.png">
 
 
@@ -469,12 +472,24 @@
                 
               
 
-              <time title="创建时间：2020-08-28 20:10:40 / 修改时间：21:17:19" itemprop="dateCreated datePublished" datetime="2020-08-28T20:10:40+08:00">2020-08-28</time>
+              <time title="创建时间：2020-08-28 20:10:40" itemprop="dateCreated datePublished" datetime="2020-08-28T20:10:40+08:00">2020-08-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-08-31 00:14:13" itemprop="dateModified" datetime="2020-08-31T00:14:13+08:00">2020-08-31</time>
               
             
           </span>
@@ -538,7 +553,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">918</span>
+                <span title="本文字数">5.9k</span>
               
 
               
@@ -552,7 +567,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">8 分钟</span>
+                <span title="阅读时长">49 分钟</span>
               
             </div>
           
@@ -573,7 +588,7 @@
 
       
         <blockquote>
-<p>本周课程主要包括图论中最短路径的问题和有关树的习题课。</p>
+<p>本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="最短路径问题的抽象"><a href="#最短路径问题的抽象" class="headerlink" title="最短路径问题的抽象"></a>最短路径问题的抽象</h1><p>一般而言，最短路径问题都可抽象为：<br>在网络中，求两个不同顶点之间的所有路径中，边的权值之和最小的那一条路径，从而，有：</p>
@@ -595,7 +610,261 @@
 <p>无权图的单源最短路径问题本质上就是 BFS，假设源点为$v_3$，按照 BFS 的思路，通过$v_3$可以直接访问$v_1$和$v_2$，这算是与$v_3$的距离为 1 所能访问的顶点，依次类推，与$V_3$距离为 2 所能访问的顶点就是$v_2$和$v_4$，与$v_3$距离为 3 所能访问的顶点就是$v_5$和$v_7$。</p>
 <p>接着在按照 BFS 算法写出其伪码算法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Unweighted</span><span class="params">(Vertex S)</span> </span>&#123;</span><br><span class="line">	Enqueue(S, Q);</span><br><span class="line">	<span class="keyword">while</span>(!IsEmpty(Q)) &#123;</span><br><span class="line">		V = Dequeue(Q);</span><br><span class="line">		<span class="keyword">for</span>(V 的每个邻接点 W) &#123;</span><br><span class="line">			<span class="keyword">if</span>(dist[W] == <span class="number">-1</span>) &#123;</span><br><span class="line">				dist[W] = dist[V] + <span class="number">1</span>;</span><br><span class="line">				path[W] = V;</span><br><span class="line">				Enqueue(W, Q);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>与 BFS 算法不同的是，这里用 dist 数组来保存源点到各个顶点的距离，用 path 数组保存了源点到各个顶点的路径。这里多说一句，若想知道路径的距离是多少直接访问 dist 数组即可；若要知道路径是什么，递归输出 path 数组即可（非递归输出的顺序是逆过来的）。</p>
-
+<h1 id="有权图的单源最短路径"><a href="#有权图的单源最短路径" class="headerlink" title="有权图的单源最短路径"></a>有权图的单源最短路径</h1><p>有权图的最短路径与无权图的最短路径最显著的区别就是，有权图的最短路径不一定是进过顶点最少的路径，而无权图的最短路径则一定是经过顶点最少的路径。以下图为例，$v_1 -&gt; v_4 -&gt; v_6$与$v_1 -&gt; v_4 -&gt; v_7 -&gt; v_6$相比，第二条路径要更短一点。<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png" alt="Graph_1" title="Graph_1"><br>同样，当图内存在负权值的边时，就可能产生<strong>负值圈（Negative-cost cycle）</strong>，如下图：<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_2.png" alt="Graph_2" title="Graph_2"><br>此时单源最短路径的算法是无法得到正确结果的，这里不深入讨论这类问题。</p>
+<p>回过头来，有权图的单源最短路径算法与无权图的单源最短路算法有一个共同点，那就是二者皆是按照递增的顺序找出到各个顶点的最短路径，而有权图的单源最短路径算法也叫<strong>Dijkstra算法</strong>。</p>
+<h2 id="Dijkstra-算法"><a href="#Dijkstra-算法" class="headerlink" title="Dijkstra 算法"></a>Dijkstra 算法</h2><p>Dijkstra 算法是典型的<strong><a href="https://baike.baidu.com/item/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/5411800?fr=aladdin" target="_blank" rel="noopener">贪心算法</a></strong>，直接描述其过程有点麻烦，先看下面的伪码算法描述：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(Vertex S)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>) &#123;</span><br><span class="line">		v = 未收录顶点中 dist 最小者;</span><br><span class="line">		<span class="keyword">if</span>(这样的 v 不存在) <span class="keyword">break</span>;</span><br><span class="line">		collected[v] = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(v 的每个邻接点 w)&#123;</span><br><span class="line">			<span class="keyword">if</span>(collected[w] == <span class="literal">false</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(dist[v] + &lt;v, w&gt;的权值 &lt; dist[w]) &#123;</span><br><span class="line">					dist[w] = dist[v] + &lt;v, w&gt;的权值;</span><br><span class="line">					path[w] = v;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>需要注意的地方：</p>
+<ol>
+<li>不能解决有负边的情况</li>
+<li>总是按照顶点序号递增（非递减）的顺序来开始算法</li>
+<li>每次收录一个顶点 w 后要更新从 v 到 w 的最短路径的权值和</li>
+<li>每次收录一个顶点 w 后可能会影响 v 到其他顶点的最短路径，所以要对 v 的邻接点进行访问</li>
+</ol>
+<p>如何从未收录顶点中找出 dist 最小者是影响此算法时间复杂度的关键，根据方法的不同，有两种情况：</p>
+<ol>
+<li>直接扫描所有未收录顶点，每次在找出所有顶点中 dist 最小的顶点，然后再访问当前这个顶点的所有邻接点，时间复杂度为：$O(|V^2| + |E|)$，这种方法适合稠密图</li>
+<li>如果是将 dist 存在最小堆中，那么找出所有顶点中 dist 最小的顶点所耗费的时间就是$O(log|V|)$，但是最后还得将这个值插入到堆中，且对于一个连通的图而言，边数肯定大于等于顶点数，所以其时间复杂度为：$T = O(|V|log|V| + |E|log|V|) = O(|E|log|V|)$，这种方法适合稀疏图</li>
+</ol>
+<p>下面再以下图中的图为例，手动模拟一遍算法。</p>
+<p><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_3.png" alt="Graph_3" title="Graph_3"></p>
+<p>首先，dist 和 path 数组都要先初始化：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+</tr>
+</tbody>
+</table>
+<p>注意上面下标是从 1 开始的，与顶点下标对应免得搞混，当然从 0 开始也是没有问题的，但后面分析问题时可能搞混淆。</p>
+<p>接着从 $v_1$ 开始，在访问$v_1$的邻接点之前，需要先将 dist[1] 的值修改为 0，因为其自身到自身的距离是 0，然后访问$v_1$的邻接点，并更新这些邻接点对应的 dist 和 path 数组的值（$v_1$的邻接点只有$v_2$和$v_4$），此时 dist 与 path<br>数组的值为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><font color="red">2</font></td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+</tr>
+</tbody>
+</table>
+<p>此时又回到循环体的开头部分，找出 dist 中最小的且未被访问过的，显然是$v_4$，然后利用$v_4$来更新 dist 和 path 数组的值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><font color="red">3</font></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">3</font></td>
+<td style="text-align:center"><font color="red">9</font></td>
+<td style="text-align:center"><font color="red">5</font></td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+</tr>
+</tbody>
+</table>
+<p>再继续下一轮循环，此时选出的顶点就是$v_2$，在更新 dist 和 path 数组的值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>上面表格中的值与第二次循环没有变化，原因在于通过$v_2$并不能使$v_1$到达$v_4$和$v_5$的距离变小，所以也就不用更新 dist 和 path 数组的值。</p>
+<p>再继续下一轮循环，此时选出的顶点就是$v_3$（注意是按递增顺序，所以不是$v_5$），此时通过$v_3$可以使$v_1$到$v_6$的距离变小，所以更新数组中的值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><font color="red">8</font></td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><font color="red">3</font></td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>接着选定$v_5$，按照同样的过程，数组值也不用更新。</p>
+<p>在选定$v_7$，此时可以使$v_1$到$v_6$的距离变小，更新数组的值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><font color="red">6</font></td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><font color="red">7</font></td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>最后一个顶点是$v_6$，但$v_6$没有邻接点（就算有，此时其他顶点也都被访问过了），所以循环会结束。</p>
+<p>注意上述过程与姥姥讲的略微有点不一致，也就是开头加入$v_1$后，数组值都是循环体内更新的；而姥姥讲的是在循环开始之前就已经全部更新好了。实际上，在循环体内更新还要更加方便一点。</p>
+<h1 id="有权图的多源最短路径"><a href="#有权图的多源最短路径" class="headerlink" title="有权图的多源最短路径"></a>有权图的多源最短路径</h1><p>考虑有权图的多源最短路径时，毫无疑问会想到直接将单源最短路径算法调用$|V|$（因为顶点个数是$|V|$），此时算法的时间复杂度为：$ T = O(|V^3| + |E| \times |V|)$，显然如果是稀疏图，效率较高。</p>
+<p>那碰到稠密图怎么办呢？答案是用 Floyd 算法</p>
+<h2 id="Floyd-算法"><a href="#Floyd-算法" class="headerlink" title="Floyd 算法"></a>Floyd 算法</h2><p>Floyd 算法与 Dijkstra 算法有点类似，但是其借助了数学归纳法，相比 Dijkstra 算法，代码要简单一点。</p>
+<p>注意 Floyd 算法只能用于邻接矩阵，它本身也是通过邻接矩阵来更新最短路径的权值之和的，当$D^{k-1}$已经完成，递推到$D^k$时，主要理解两个点：</p>
+<ol>
+<li>若 k 不在最短路径$i -&gt; \dots -&gt; j$之间，则$D^k = D^{k-1}$</li>
+<li>若 k 在最短路径径$i -&gt; \dots -&gt; j$之间，则该路径必定由两段最短路径组成：$D^k[i][j] = D^{k-1}[i][k] + D^{k-1}[k][j]$</li>
+</ol>
+<p>其伪码描述为：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Floyd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; N; j++) &#123;</span><br><span class="line">			D[i][j] = G[i][j];	<span class="comment">// initialization</span></span><br><span class="line">			path[i][j] = <span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// notice these loop variables</span></span><br><span class="line">	<span class="keyword">for</span>(k = <span class="number">0</span>; k &lt; N; k++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; N; i++) &#123; </span><br><span class="line">			<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; N; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(D[i][k] + D[k][j] &lt; D[i][j]) &#123;</span><br><span class="line">					D[i][j] = D[i][k] + D[k][j];</span><br><span class="line">					path[i][j] = k;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><h2 id="07-4-哈利·波特的考试"><a href="#07-4-哈利·波特的考试" class="headerlink" title="07-4 哈利·波特的考试"></a>07-4 哈利·波特的考试</h2><p>这道题目是典型的多源最短路径问题，直接用邻接矩阵存储图，然后调用 Folyd 算法即可得到所有的最短路径。但要注意这道题目的最优解是选择出到其他各顶点的综合距离最短的顶点，也就是说各个顶点到其他顶点的最短路径中最长的那条最短路径的最小值者就是最优解，好吧，很拗口。注意，并不能以最短路径之和最小者为最优解，这是错误的。<br>这道题的代码写的比较简单，思路与上述一致，如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3fffffff</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, G[maxn][maxn], dist[maxn][maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">floyd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			dist[i][j] = G[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= n; k++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(dist[i][k] + dist[k][j] &lt; dist[i][j] &amp;&amp; i != j) &#123;</span><br><span class="line">					dist[i][j] = dist[i][k] + dist[k][j]; </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findanimal</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	floyd();</span><br><span class="line">	<span class="keyword">int</span> mindist = inf;</span><br><span class="line">	<span class="keyword">int</span> animal;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> maxdist = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i != j &amp;&amp; dist[i][j] &gt; maxdist) maxdist = dist[i][j];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(maxdist == inf) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(mindist &gt; maxdist) &#123;</span><br><span class="line">			mindist = maxdist;</span><br><span class="line">			animal = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; animal &lt;&lt; <span class="string">' '</span> &lt;&lt; mindist;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	fill(G[<span class="number">0</span>], G[<span class="number">0</span>] + maxn * maxn, inf);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">int</span> v1, v2;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1 &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G[v1][v2];</span><br><span class="line">		G[v2][v1] = G[v1][v2];</span><br><span class="line">	&#125;</span><br><span class="line">	findanimal();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">samples:</span></span><br><span class="line"><span class="comment">in:</span></span><br><span class="line"><span class="comment">6 11</span></span><br><span class="line"><span class="comment">3 4 70</span></span><br><span class="line"><span class="comment">1 2 1</span></span><br><span class="line"><span class="comment">5 4 50</span></span><br><span class="line"><span class="comment">2 6 50</span></span><br><span class="line"><span class="comment">5 6 60</span></span><br><span class="line"><span class="comment">1 3 70</span></span><br><span class="line"><span class="comment">4 6 60</span></span><br><span class="line"><span class="comment">3 6 80</span></span><br><span class="line"><span class="comment">5 1 100</span></span><br><span class="line"><span class="comment">2 4 60</span></span><br><span class="line"><span class="comment">5 2 80</span></span><br><span class="line"><span class="comment">out:</span></span><br><span class="line"><span class="comment">4 70</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="07-5-Saving-James-Bond-Hard-Version"><a href="#07-5-Saving-James-Bond-Hard-Version" class="headerlink" title="07-5 Saving James Bond - Hard Version"></a>07-5 Saving James Bond - Hard Version</h2><h2 id="07-6-旅游规划"><a href="#07-6-旅游规划" class="headerlink" title="07-6 旅游规划"></a>07-6 旅游规划</h2>
       
     </div>
 
@@ -964,7 +1233,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最短路径问题的抽象"><span class="nav-number">1.</span> <span class="nav-text">最短路径问题的抽象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无权图的单源最短路径算法"><span class="nav-number">2.</span> <span class="nav-text">无权图的单源最短路径算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最短路径问题的抽象"><span class="nav-number">1.</span> <span class="nav-text">最短路径问题的抽象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无权图的单源最短路径算法"><span class="nav-number">2.</span> <span class="nav-text">无权图的单源最短路径算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有权图的单源最短路径"><span class="nav-number">3.</span> <span class="nav-text">有权图的单源最短路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-算法"><span class="nav-number">3.1.</span> <span class="nav-text">Dijkstra 算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有权图的多源最短路径"><span class="nav-number">4.</span> <span class="nav-text">有权图的多源最短路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Floyd-算法"><span class="nav-number">4.1.</span> <span class="nav-text">Floyd 算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homework"><span class="nav-number">5.</span> <span class="nav-text">Homework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#07-4-哈利·波特的考试"><span class="nav-number">5.1.</span> <span class="nav-text">07-4 哈利·波特的考试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#07-5-Saving-James-Bond-Hard-Version"><span class="nav-number">5.2.</span> <span class="nav-text">07-5 Saving James Bond - Hard Version</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#07-6-旅游规划"><span class="nav-number">5.3.</span> <span class="nav-text">07-6 旅游规划</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -998,7 +1267,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">452k</span>
+    <span title="站点总字数">457k</span>
   
 
   
@@ -1009,7 +1278,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">62:46</span>
+    <span title="站点阅读时长">63:28</span>
   
 </div>
 
