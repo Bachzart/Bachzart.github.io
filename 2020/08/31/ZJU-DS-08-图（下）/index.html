@@ -139,18 +139,18 @@
 
 
 
-  <meta name="description" content="Intro最近发现一个问题，做题的时候，不管有的没的，要用的函数全靠自己写，写来写去也懒得去管到底有没有那个库函数了…这样不太好，日后还不是得把自己累死，还是得善于利用东西才行（又为自己偷懒找借口🤣）。于是，这篇文章就用来记录C中常用的一些库函数，以免日后又忘记了。">
-<meta name="keywords" content="C&#x2F;C++">
+  <meta name="description" content="这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径">
+<meta name="keywords" content="ZJU_DS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言常用库函数">
-<meta property="og:url" content="http://bachzart.github.io/2019/05/24/C语言常用库函数/index.html">
+<meta property="og:title" content="ZJU_DS_08-图（下）">
+<meta property="og:url" content="http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/index.html">
 <meta property="og:site_name" content="Bachzart&#39;s Blog">
-<meta property="og:description" content="Intro最近发现一个问题，做题的时候，不管有的没的，要用的函数全靠自己写，写来写去也懒得去管到底有没有那个库函数了…这样不太好，日后还不是得把自己累死，还是得善于利用东西才行（又为自己偷懒找借口🤣）。于是，这篇文章就用来记录C中常用的一些库函数，以免日后又忘记了。">
+<meta property="og:description" content="这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-09T16:14:29.992Z">
+<meta property="og:updated_time" content="2020-08-31T04:27:33.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言常用库函数">
-<meta name="twitter:description" content="Intro最近发现一个问题，做题的时候，不管有的没的，要用的函数全靠自己写，写来写去也懒得去管到底有没有那个库函数了…这样不太好，日后还不是得把自己累死，还是得善于利用东西才行（又为自己偷懒找借口🤣）。于是，这篇文章就用来记录C中常用的一些库函数，以免日后又忘记了。">
+<meta name="twitter:title" content="ZJU_DS_08-图（下）">
+<meta name="twitter:description" content="这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径">
 
 
 
@@ -159,7 +159,7 @@
 
 
 
-  <link rel="canonical" href="http://bachzart.github.io/2019/05/24/C语言常用库函数/">
+  <link rel="canonical" href="http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/">
 
 
 
@@ -169,7 +169,7 @@
   };
 </script>
 
-  <title>C语言常用库函数 | Bachzart's Blog</title>
+  <title>ZJU_DS_08-图（下） | Bachzart's Blog</title>
   
 
 
@@ -424,7 +424,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://bachzart.github.io/2019/05/24/C语言常用库函数/">
+    <link itemprop="mainEntityOfPage" href="http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bachzart">
@@ -441,7 +441,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C语言常用库函数
+          <h2 class="post-title" itemprop="name headline">ZJU_DS_08-图（下）
 
               
             
@@ -467,24 +467,12 @@
                 
               
 
-              <time title="创建时间：2019-05-24 22:54:12" itemprop="dateCreated datePublished" datetime="2019-05-24T22:54:12+08:00">2019-05-24</time>
+              <time title="创建时间：2020-08-31 12:07:25 / 修改时间：12:27:33" itemprop="dateCreated datePublished" datetime="2020-08-31T12:07:25+08:00">2020-08-31</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-10 00:14:29" itemprop="dateModified" datetime="2019-07-10T00:14:29+08:00">2019-07-10</time>
               
             
           </span>
@@ -501,14 +489,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Data-Structures-and-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures and Algorithms</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/C-C/" itemprop="url" rel="index"><span itemprop="name">C/C++</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Data-Structures-and-Algorithms/ZJU-DS/" itemprop="url" rel="index"><span itemprop="name">ZJU_DS</span></a></span>
 
                 
                 
@@ -523,7 +511,7 @@
 
           
           
-            <span id="/2019/05/24/C语言常用库函数/" class="leancloud_visitors" data-flag-title="C语言常用库函数">
+            <span id="/2020/08/31/ZJU-DS-08-图（下）/" class="leancloud_visitors" data-flag-title="ZJU_DS_08-图（下）">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -548,7 +536,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.8k</span>
+                <span title="本文字数">51</span>
               
 
               
@@ -562,7 +550,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">23 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -582,36 +570,11 @@
       
 
       
-        <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>最近发现一个问题，做题的时候，不管有的没的，要用的函数全靠自己写，写来写去也懒得去管到底有没有那个库函数了…这样不太好，日后还不是得把自己累死，还是得善于利用东西才行（又为自己偷懒找借口🤣）。于是，这篇文章就用来记录<code>C</code>中常用的一些库函数，以免日后又忘记了。<br><a id="more"></a></p>
-<h1 id="stdlib-h"><a href="#stdlib-h" class="headerlink" title="stdlib.h"></a>stdlib.h</h1><p><code>stdlib.h</code>即<code>standard library</code>标准库头文件，这个头文件内有很多有用的工具函数。</p>
-<h2 id="qsort"><a href="#qsort" class="headerlink" title="qsort"></a>qsort</h2><p><code>qsort</code>函数是<code>C</code>语言自带的排序函数，采用排序方法是<strong>快速排序</strong>，其声明位于头文件<code>stdlib.h</code>中，貌似快速排序是实际使用效果最好的几种排序方法之一。</p>
-<h3 id="Function-Prototype"><a href="#Function-Prototype" class="headerlink" title="Function Prototype"></a>Function Prototype</h3><p>函数原型如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">qsort</span><span class="params">(<span class="keyword">void</span> *base, <span class="keyword">size_t</span> num, <span class="keyword">size_t</span> size, <span class="keyword">int</span> (*compare)(<span class="keyword">const</span> <span class="keyword">void</span> *, <span class="keyword">const</span> <span class="keyword">void</span> *))</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>参数说明：<br><div class="tabs" id="fourth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#fourth-unique-name-1">base</a></li><li class="tab"><a href="#fourth-unique-name-2">num</a></li><li class="tab"><a href="#fourth-unique-name-3">size</a></li><li class="tab"><a href="#fourth-unique-name-4">compare</a></li></ul><div class="tab-content"><div class="tab-pane active" id="fourth-unique-name-1"><p><code>base</code>指向数组的起始地址，通常会传入一个数组名</p></div><div class="tab-pane" id="fourth-unique-name-2"><p><code>num</code>表示该数组元素的个数</p></div><div class="tab-pane" id="fourth-unique-name-3"><p><code>size</code>表示数组中每个元素的大小（字节数）</p></div><div class="tab-pane" id="fourth-unique-name-4"><p><code>(*compare)(const void*, const void*)</code>为指向比较函数的函数指针，决定了排序顺序</p></div></div></div></p>
-<h3 id="Compare-Function"><a href="#Compare-Function" class="headerlink" title="Compare Function"></a>Compare Function</h3><p><code>qsort</code>函数声明中的<code>compare</code>参数是一个指针，指向一个比较两个元素的函数。比较函数的原型应该是<code>int compare(const void *a, const void *b);</code>，注意这个函数的形参是<code>const void *</code>型，也就是说，是不限制参数指针类型的，并且，返回值是<code>int</code>型的。<br><code>qsort</code>函数在使用<code>compare</code>函数指针调用<code>compare</code>比较函数时，传入的实参是没有限定指针类型的。一般而言，<code>compare</code>函数按照下面的代码来写：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(*(<span class="keyword">int</span>*)a &lt; *(<span class="keyword">int</span>*)b) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">if</span>(*(<span class="keyword">int</span>*)a == *(<span class="keyword">int</span>*)b) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(*(<span class="keyword">int</span>*)a &gt; *(<span class="keyword">int</span>*)b) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>从上面的代码可以看出，指针<code>a</code>和<code>b</code>在传入到<code>compare</code>比较函数内后，<strong>先进行了指针类型的强转操作</strong>，然后再分别对强转后的<code>a</code>和<code>b</code>指针进行解引用，并做差来判断<code>*a</code>和<code>*b</code>的大小，根据三种不同的情况返回三个值，分别对应以下三种情况：<br><div class="tabs" id="third-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#third-unique-name-1">-1</a></li><li class="tab"><a href="#third-unique-name-2">0</a></li><li class="tab"><a href="#third-unique-name-3">1</a></li></ul><div class="tab-content"><div class="tab-pane active" id="third-unique-name-1"><p><code>(*a)</code>所指向元素会被排在<code>*(b)</code>所指向元素之前</p></div><div class="tab-pane" id="third-unique-name-2"><p><code>(*a)</code>所指向元素和<code>*(b)</code>所指向元素之间顺序不确定</p></div><div class="tab-pane" id="third-unique-name-3"><p><code>(*a)</code>所指向元素会被排在<code>*(b)</code>所指向元素之后</p></div></div></div></p>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>对普通<code>int</code>型数组进行排序时：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (*(<span class="keyword">int</span>*)a - *(<span class="keyword">int</span>*)b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, <span class="built_in">array</span>[<span class="number">8</span>] = &#123;<span class="number">30</span>, <span class="number">52</span>, <span class="number">11</span>, <span class="number">29</span>, <span class="number">58</span>, <span class="number">3</span>, <span class="number">88</span>, <span class="number">60</span>&#125;;</span><br><span class="line">	qsort(<span class="built_in">array</span>, <span class="number">8</span>, <span class="keyword">sizeof</span>(<span class="built_in">array</span>[<span class="number">0</span>]), compare);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">8</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, <span class="built_in">array</span>[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Print: 3 11 29 30 52 58 60 88</span></span><br><span class="line"><span class="comment">if '(*(int*)b - *(int*)a)' replaces '(*(int*)a - *(int*)b)'</span></span><br><span class="line"><span class="comment">then Print: 88 60 58 52 30 29 11 3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
-<p>对其他类型的数组而言，使用方法也大致如此，对字符串数组（即二维字符数组）使用时，可以将比较函数这样写：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="built_in">strcmp</span>((<span class="keyword">char</span>*)a, (<span class="keyword">char</span>*)b));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>配合<code>strcmp</code>函数使用就会很方便。<br>另外，<code>快速排序</code>是<strong>不稳定的排序算法</strong>，对于结构体而言，当两个元素的值相等时，经过快速排序后，其相对位置可能发生了改变，这就导致结构体排序完成之后，输出结果不对（但是序列有序无误），为了避免这种情况，需要在结构体内新增一个<code>标记位</code>，当两个结构体值相等时，比较标志位的大小，从而保持二者相对位置不发生改变。</p>
-<h1 id="ctype-h"><a href="#ctype-h" class="headerlink" title="ctype.h"></a>ctype.h</h1><p><code>ctype.h</code>这个头文件全称应该是<code>character type</code>吧，因为其内部定义了一批<code>C</code>语言字符分类函数，用于测试字符是否属于特定的字符类别。这些函数实现起来都不难，再重复造轮子就有点划不来了。</p>
-<div class="note warning">
-            <p>对于一个字符变量而言，其本质依然是整型变量。</p>
-          </div>
-<h2 id="isalpha"><a href="#isalpha" class="headerlink" title="isalpha"></a>isalpha</h2><p>这个函数用于判断传入的字符是否是字母（包含大小写）。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isalpha</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是字母，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
-<h2 id="isdigit"><a href="#isdigit" class="headerlink" title="isdigit"></a>isdigit</h2><p>这个函数用于判断传入的字符是否是罗马数字（0-9）。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isdigit</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是数字，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
-<h2 id="isxdigit"><a href="#isxdigit" class="headerlink" title="isxdigit"></a>isxdigit</h2><p>这个函数用于判断传入的字符是否是十六进制字符（0-9、A-Z、a-z）。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isxdigit</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是十六进制字符，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
-<h2 id="islower"><a href="#islower" class="headerlink" title="islower"></a>islower</h2><p>这个函数用于判断传入的字符是否是小写字母（a-z）。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">islower</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是小写字母，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
-<h2 id="isupper"><a href="#isupper" class="headerlink" title="isupper"></a>isupper</h2><p>这个函数用于判断传入的字符是否是大写字母（A-Z）。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isupper</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是大写字母，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
-<h2 id="tolower"><a href="#tolower" class="headerlink" title="tolower"></a>tolower</h2><p>这个函数用于将传入的字符转换为小写字母。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">tolower</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>返回值为所传入字符变量的小写字母。</p>
-<h2 id="toupper"><a href="#toupper" class="headerlink" title="toupper"></a>toupper</h2><p>这个函数用于将传入的字符转换为大写字母。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">tolower</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>返回值为所传入字符变量的大写字母。</p>
-<h2 id="isalnum"><a href="#isalnum" class="headerlink" title="isalnum"></a>isalnum</h2><p>这个函数用于判断传入的字符是否是字母或数字。<br>函数原型：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isalnum</span><span class="params">(<span class="keyword">int</span> ch)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p>若传入的字符是字母或数字，则返回<strong>非零</strong>，若不是则返回<strong>0</strong>。</p>
+        <blockquote>
+<p>这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>##</p>
 <hr>
       
     </div>
@@ -674,7 +637,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://bachzart.github.io/2019/05/24/C语言常用库函数/" title="C语言常用库函数">http://bachzart.github.io/2019/05/24/C语言常用库函数/</a>
+    <a href="http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/" title="ZJU_DS_08-图（下）">http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -686,7 +649,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C-C/" rel="tag"><i class="fa fa-tag"></i> C/C++</a>
+            <a href="/tags/ZJU-DS/" rel="tag"><i class="fa fa-tag"></i> ZJU_DS</a>
           
         </div>
       
@@ -699,8 +662,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/16/C语言里爬过的坑/" rel="next" title="C语言里爬过的“坑”">
-                <i class="fa fa-chevron-left"></i> C语言里爬过的“坑”
+              <a href="/2020/08/29/Prologue（プロローグ - 押尾コータロー）- 翻弹/" rel="next" title="Prologue（プロローグ - 押尾コータロー）- 翻弹">
+                <i class="fa fa-chevron-left"></i> Prologue（プロローグ - 押尾コータロー）- 翻弹
               </a>
             
           </div>
@@ -708,10 +671,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/30/雨夜杂思/" rel="prev" title="雨夜杂思">
-                雨夜杂思 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -981,7 +940,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro"><span class="nav-number">1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stdlib-h"><span class="nav-number">2.</span> <span class="nav-text">stdlib.h</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#qsort"><span class="nav-number">2.1.</span> <span class="nav-text">qsort</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Prototype"><span class="nav-number">2.1.1.</span> <span class="nav-text">Function Prototype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compare-Function"><span class="nav-number">2.1.2.</span> <span class="nav-text">Compare Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.1.3.</span> <span class="nav-text">Examples</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ctype-h"><span class="nav-number">3.</span> <span class="nav-text">ctype.h</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#isalpha"><span class="nav-number">3.1.</span> <span class="nav-text">isalpha</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isdigit"><span class="nav-number">3.2.</span> <span class="nav-text">isdigit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isxdigit"><span class="nav-number">3.3.</span> <span class="nav-text">isxdigit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#islower"><span class="nav-number">3.4.</span> <span class="nav-text">islower</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isupper"><span class="nav-number">3.5.</span> <span class="nav-text">isupper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tolower"><span class="nav-number">3.6.</span> <span class="nav-text">tolower</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toupper"><span class="nav-number">3.7.</span> <span class="nav-text">toupper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#isalnum"><span class="nav-number">3.8.</span> <span class="nav-text">isalnum</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a></li></ol></div>
             
 
           </div>

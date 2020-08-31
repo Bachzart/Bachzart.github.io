@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-08-30T12:38:34.095Z</updated>
+  <updated>2020-08-31T04:27:33.521Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ZJU_DS_08-图（下）</title>
+    <link href="http://bachzart.github.io/2020/08/31/ZJU-DS-08-%E5%9B%BE%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/</id>
+    <published>2020-08-31T04:07:25.000Z</published>
+    <updated>2020-08-31T04:27:33.521Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+    
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
+    
+  </entry>
   
   <entry>
     <title>Prologue（プロローグ - 押尾コータロー）- 翻弹</title>
@@ -49,7 +73,7 @@
     <link href="http://bachzart.github.io/2020/08/28/ZJU-DS-07-%E5%9B%BE%EF%BC%88%E4%B8%AD%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/28/ZJU-DS-07-图（中）/</id>
     <published>2020-08-28T12:10:40.000Z</published>
-    <updated>2020-08-30T16:14:13.022Z</updated>
+    <updated>2020-08-31T04:02:58.964Z</updated>
     
     <summary type="html">
     
@@ -456,29 +480,6 @@
     
     
       <category term="BFD" scheme="http://bachzart.github.io/tags/BFD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MPLS基础配置方法</title>
-    <link href="http://bachzart.github.io/2019/03/27/MPLS%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
-    <id>http://bachzart.github.io/2019/03/27/MPLS基础配置方法/</id>
-    <published>2019-03-27T07:45:56.000Z</published>
-    <updated>2019-05-24T14:39:39.145Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/MPLS路由协议/6377052?fr=aladdin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MPLS&lt;/a&gt;，Multi-Protocol Label Switching，全称多协议标记交换，是一种标记机制的&lt;a href=&quot;https://baike.baidu.com/item/包交换技术/6208274&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;包交换技术&lt;/a&gt;，通过简单的2层交换来集成IP Routing的控制。&lt;br&gt;MPLS究竟是不是路由协议，究竟工作在第几层，在这里，不做探讨，以下内容只介绍其基础的配置，并衔接&lt;a href=&quot;https://bachzart.github.io/2019/03/27/ISIS基础配置/&quot;&gt;ISIS基础配置&lt;/a&gt;这篇文章。&lt;/p&gt;
-&lt;p&gt;&lt;blockquote&gt;以下配置命还是以博科设备为例&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Networking" scheme="http://bachzart.github.io/categories/Networking/"/>
-    
-      <category term="Switching" scheme="http://bachzart.github.io/categories/Networking/Switching/"/>
-    
-    
-      <category term="MPLS" scheme="http://bachzart.github.io/tags/MPLS/"/>
     
   </entry>
   
