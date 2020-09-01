@@ -147,10 +147,13 @@
 <meta property="og:site_name" content="Bachzart&#39;s Blog">
 <meta property="og:description" content="这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-31T04:27:33.521Z">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_8/ZJU_DS_8_1.png">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_8/ZJU_DS_8_1.png">
+<meta property="og:updated_time" content="2020-09-01T15:23:05.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZJU_DS_08-图（下）">
 <meta name="twitter:description" content="这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径">
+<meta name="twitter:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_8/ZJU_DS_8_1.png">
 
 
 
@@ -467,12 +470,24 @@
                 
               
 
-              <time title="创建时间：2020-08-31 12:07:25 / 修改时间：12:27:33" itemprop="dateCreated datePublished" datetime="2020-08-31T12:07:25+08:00">2020-08-31</time>
+              <time title="创建时间：2020-08-31 12:07:25" itemprop="dateCreated datePublished" datetime="2020-08-31T12:07:25+08:00">2020-08-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-09-01 23:23:05" itemprop="dateModified" datetime="2020-09-01T23:23:05+08:00">2020-09-01</time>
               
             
           </span>
@@ -536,7 +551,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">51</span>
+                <span title="本文字数">3.2k</span>
               
 
               
@@ -550,7 +565,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">27 分钟</span>
               
             </div>
           
@@ -574,7 +589,243 @@
 <p>这周课程主要介绍了图的另外两个应用：最小生成树和拓扑排序，顺带讲了一下关键路径</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>##</p>
+<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>什么是最小生成树（Minimum Spaning Tree）？<br>它首先是一棵树，所以它没有回路，且 V 个顶点的最小生成树一定有 V-1 条边（这就是树的性值）。既然是生成树，所以这棵树包含了图中所有顶点，树中的 V-1 条边一定也都在图内；那最小是什么？最小的含义是指边的<strong>权重和</strong>最小。<br>这里要注意，如果图是连通的，那么这个图一定存在最小生成树且不一定唯一。</p>
+<p>下面介绍的两种生成最小生成树的算法本质思想都是基于“贪心”，这与前面的 Dijkstra 算法是一致的。所谓“贪心”，即是指每一步都要“最好”的，在最小生成树中，权重最小的边也就是“最好”的了。</p>
+<h2 id="Prim-算法"><a href="#Prim-算法" class="headerlink" title="Prim 算法"></a>Prim 算法</h2><p>Prim 算法的大致过程从一个顶点开始，慢慢的生长成一棵树，先看下它的伪码描述：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Prim</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	MST = &#123;S&#125;;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>) &#123;</span><br><span class="line">		V = 未收录顶点中 dist 最小者;</span><br><span class="line">		<span class="keyword">if</span>(V 不存在) <span class="keyword">break</span>;</span><br><span class="line">		将 V 收录进 MST;</span><br><span class="line">		dist[V] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(V 的每个邻接点 W) &#123;</span><br><span class="line">			<span class="keyword">if</span>(dist[W] != <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>( 边权(V,W) &lt; dist[W]) &#123;</span><br><span class="line">					dist[W] = <span class="number">0</span>;</span><br><span class="line">					parent[W] = V;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(MST 中收录的顶点不到 |Ｖ| 个) </span><br><span class="line">		Error(<span class="string">"生成树不存在"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Prim 算法与 Dijkstra 算法十分类似，就是循环内的判断条件不一样，其他基本一致。以下图为例，手动模拟一下 Prim 算法的运行过程。dist 数组用来筛选边权最小的顶点；parent 数组来保存树，且 parent 数组需要初始化为 -1，这里与并查集的思路是类似的。</p>
+<p><img src="/my_photo_gallery/ZJU_DS_8/ZJU_DS_8_1.png" alt="Graph_1" title="Graph_1"></p>
+<p>以$v_1$为源点，dist 数组初始化：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1 </td>
+</tr>
+</tbody>
+</table>
+<p>直接将 dist[1] 初始化为 0，然后$v_1$作为未收录顶点中 dist 最小者，将其收录进 MST，再访问其每个邻接点，此时可以将 dist 数组的值更新：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><font color="red">2</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">∞</td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+</tr>
+</tbody>
+</table>
+<p>接着，未收录顶点中 dist 最小者就是$v_4$，收录进 MST，此时 dist 和 parent 数组更新：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><font color="red">2</font></td>
+<td style="text-align:center"><font color="red">0</font></td>
+<td style="text-align:center"><font color="red">7</font></td>
+<td style="text-align:center"><font color="red">7</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+<td style="text-align:center"><font color="red">4</font></td>
+</tr>
+</tbody>
+</table>
+<p>可以看到，因为$(v_4, v_3) &lt; (v_1, v_3)$，所以 dist[3] 与 parent[3] 的值将会得到更新。</p>
+<p>再来，未收录顶点中 dist 最小者就是$v_2$，收录进 MST，此时 dist 和 parent 数组更新：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><font color="red">0</font></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>依次类推，收录$v_3$，有：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><font color="red">0</font></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center"><font color="red">5</font></td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><font color="red">3</font></td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>收录$v_7$，有：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">index</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">dist</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><font color="red">6</font></td>
+<td style="text-align:center"><font color="red">1</font></td>
+<td style="text-align:center"><font color="red">0</font></td>
+</tr>
+<tr>
+<td style="text-align:center">parent</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><font color="red">7</font></td>
+<td style="text-align:center"><font color="red">7</font></td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<p>最后再分别选取$v_6$和$v_5$后，MST 中收录的顶点达到 |V| 个后就得到了最小生成树。通过上面也可以看出，Prim 中的 dist 数组的用途与 Djikstra 算法中 dist 数组的用途是完全一致的，只是两者的判断条件不一样而已。另外，Prim 算法的时间复杂度也就是$O(|V|^3)$。</p>
+<h2 id="Kruskal-算法"><a href="#Kruskal-算法" class="headerlink" title="Kruskal 算法"></a>Kruskal 算法</h2><p>Kruskal 算法的大致过程是在“选边”，也就是将森林合并成树，其伪码描述为：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Kruskal</span><span class="params">(Graph G)</span> </span>&#123;</span><br><span class="line">	MST = &#123;&#125;;</span><br><span class="line">	<span class="keyword">while</span>(MST 中找不到 |V|<span class="number">-1</span> 条边 &amp;&amp; E 中还有边) &#123;</span><br><span class="line">		从 E 中取一条权重最小的边 E(v, w);	<span class="comment">//使用最小堆实现</span></span><br><span class="line">		将取出的最小边 E(v, w)从 E 中删除;</span><br><span class="line">		<span class="keyword">if</span>(E(v, w) 不在 MST 中构成回路) &#123;		<span class="comment">//使用并查集实现</span></span><br><span class="line">			将 E(v, w)加入 MST;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			彻底无视 E(v, w);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(MST 中找不到 |V|<span class="number">-1</span> 条边) &#123;</span><br><span class="line">		Error(<span class="string">"生成树不存在"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以下图为例，手动模拟一下 Kruskal 算法的运行过程。</p>
+<p><img src="/my_photo_gallery/ZJU_DS_8/ZJU_DS_8_1.png" alt="Graph_1" title="Graph_1"></p>
+<p>依次加入边$(v_1, v_4)$、$(v_6, v_7)$、$(v_1, v_2)$、$(v_3, v_4)$、$(v_4, v_7)$、$(v_5, v_7)$即可，整个过程讲起来比 Prim 算法简单了不少，但是实现起来就稍微复杂一点，既要用到最小堆，又要用到并查集，但其时间复杂度也稍微优秀一点（相比 Prim），为：$O(|E|Log|E|)$。另外，笔试题中，Kruskal 算法解题速度是第一名，谁用谁知道。</p>
+<h1 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h1><p>拓扑排序不同于普通排序，普通排序就是按照某一规则对具有同类性质的元素进行升序或降序排序；而拓扑排序是针对有向无环图（Directed Acyclic Graph，DAG）G 进行的，是将图 G 中所有顶点排成一个线性序列，使得图中任意一对顶点 u 和 v，若边 $&lt;u, v&gt;$是图 G 的边（也即存在一条 u 到 v 的有向路径），则 u 在线性序列中一定出现在 v 之前，这样的序列叫做拓扑序列，而这个得到这个序列的过程就叫做拓扑排序。</p>
+<p>而姥姥讲的 <a href="https://baike.baidu.com/item/AOV%E7%BD%91/10628561?fr=aladdin" target="_blank" rel="noopener">AOV 网</a>，请点击链接参考下百度百科。另外，对于一个 AOV 网而言，如果有合理的拓扑序，则其必定是有向无环图。换句话说，也就是说拓扑排序可以用来检测图内是否有环，这也是笔试题中常用的知识点。</p>
+<p>拓扑排序的伪码算法如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TopSort</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(图中每个顶点 V) &#123;</span><br><span class="line">		<span class="keyword">if</span>(Indegree[V] == <span class="number">0</span>) &#123;</span><br><span class="line">			Enqueue(V, Q);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(!IsEmpty(Q)) &#123;</span><br><span class="line">		V = Dequeue(Q);</span><br><span class="line">		输出V，或者记录 V 的输出序号; cnt++;</span><br><span class="line">		<span class="keyword">for</span>(V 的每个邻接点 W) &#123;</span><br><span class="line">			<span class="keyword">if</span>(--Indegree[W] == <span class="number">0</span>) &#123;</span><br><span class="line">				Enqueue(W, Q);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(cnt != |V|) &#123;</span><br><span class="line">		Error(<span class="string">"图中有回路"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="关键路径"><a href="#关键路径" class="headerlink" title="关键路径"></a>关键路径</h1><p>关键路径问题是针对 AOE（Activity On Edge）网络而言的，属于拓扑排序的应用，一般用于安排项目的工序问题。</p>
 <hr>
       
     </div>
@@ -940,7 +1191,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prim-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Prim 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kruskal-算法"><span class="nav-number">1.2.</span> <span class="nav-text">Kruskal 算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拓扑排序"><span class="nav-number">2.</span> <span class="nav-text">拓扑排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键路径"><span class="nav-number">3.</span> <span class="nav-text">关键路径</span></a></li></ol></div>
             
 
           </div>
@@ -974,7 +1225,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">462k</span>
+    <span title="站点总字数">465k</span>
   
 
   
@@ -985,7 +1236,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">64:06</span>
+    <span title="站点阅读时长">64:32</span>
   
 </div>
 

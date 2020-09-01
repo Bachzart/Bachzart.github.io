@@ -147,15 +147,15 @@
 <meta property="og:site_name" content="Bachzart&#39;s Blog">
 <meta property="og:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_1.png">
 <meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png">
 <meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_2.png">
 <meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_3.png">
-<meta property="og:updated_time" content="2020-08-31T04:02:58.964Z">
+<meta property="og:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_4.png">
+<meta property="og:updated_time" content="2020-09-01T13:34:10.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZJU_DS_07-图（中）">
 <meta name="twitter:description" content="本周课程主要包括图论中最短路径的问题和有关树的习题课，习题课笔记添加到前面对应题目的所在的文章中了。">
-<meta name="twitter:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_1.png">
+<meta name="twitter:image" content="http://bachzart.github.io/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png">
 
 
 
@@ -489,7 +489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-08-31 12:02:58" itemprop="dateModified" datetime="2020-08-31T12:02:58+08:00">2020-08-31</time>
+                <time title="修改时间：2020-09-01 21:34:10" itemprop="dateModified" datetime="2020-09-01T21:34:10+08:00">2020-09-01</time>
               
             
           </span>
@@ -606,11 +606,11 @@
 </li>
 <li>多源最短路径问题：求任意两顶点间的最短路径</li>
 </ol>
-<h1 id="无权图的单源最短路径算法"><a href="#无权图的单源最短路径算法" class="headerlink" title="无权图的单源最短路径算法"></a>无权图的单源最短路径算法</h1><p>考虑这类问题时，有一个原则，即：按照递增（非递减）的顺序找出各个顶点的最短路。<br>以下图中的“图”为例：<br><img src="/my_photo_gallery/ZJU_DS_1.png" alt="example" title="example"></p>
+<h1 id="无权图的单源最短路径算法"><a href="#无权图的单源最短路径算法" class="headerlink" title="无权图的单源最短路径算法"></a>无权图的单源最短路径算法</h1><p>考虑这类问题时，有一个原则，即：按照递增（非递减）的顺序找出各个顶点的最短路。<br>以下图中的“图”为例：<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png" alt="example" title="example"></p>
 <p>无权图的单源最短路径问题本质上就是 BFS，假设源点为$v_3$，按照 BFS 的思路，通过$v_3$可以直接访问$v_1$和$v_2$，这算是与$v_3$的距离为 1 所能访问的顶点，依次类推，与$V_3$距离为 2 所能访问的顶点就是$v_2$和$v_4$，与$v_3$距离为 3 所能访问的顶点就是$v_5$和$v_7$。</p>
 <p>接着在按照 BFS 算法写出其伪码算法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Unweighted</span><span class="params">(Vertex S)</span> </span>&#123;</span><br><span class="line">	Enqueue(S, Q);</span><br><span class="line">	<span class="keyword">while</span>(!IsEmpty(Q)) &#123;</span><br><span class="line">		V = Dequeue(Q);</span><br><span class="line">		<span class="keyword">for</span>(V 的每个邻接点 W) &#123;</span><br><span class="line">			<span class="keyword">if</span>(dist[W] == <span class="number">-1</span>) &#123;</span><br><span class="line">				dist[W] = dist[V] + <span class="number">1</span>;</span><br><span class="line">				path[W] = V;</span><br><span class="line">				Enqueue(W, Q);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>与 BFS 算法不同的是，这里用 dist 数组来保存源点到各个顶点的距离，用 path 数组保存了源点到各个顶点的路径。这里多说一句，若想知道路径的距离是多少直接访问 dist 数组即可；若要知道路径是什么，递归输出 path 数组即可（非递归输出的顺序是逆过来的）。</p>
-<h1 id="有权图的单源最短路径"><a href="#有权图的单源最短路径" class="headerlink" title="有权图的单源最短路径"></a>有权图的单源最短路径</h1><p>有权图的最短路径与无权图的最短路径最显著的区别就是，有权图的最短路径不一定是进过顶点最少的路径，而无权图的最短路径则一定是经过顶点最少的路径。以下图为例，$v_1 -&gt; v_4 -&gt; v_6$与$v_1 -&gt; v_4 -&gt; v_7 -&gt; v_6$相比，第二条路径要更短一点。<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_1.png" alt="Graph_1" title="Graph_1"><br>同样，当图内存在负权值的边时，就可能产生<strong>负值圈（Negative-cost cycle）</strong>，如下图：<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_2.png" alt="Graph_2" title="Graph_2"><br>此时单源最短路径的算法是无法得到正确结果的，这里不深入讨论这类问题。</p>
+<h1 id="有权图的单源最短路径"><a href="#有权图的单源最短路径" class="headerlink" title="有权图的单源最短路径"></a>有权图的单源最短路径</h1><p>有权图的最短路径与无权图的最短路径最显著的区别就是，有权图的最短路径不一定是进过顶点最少的路径，而无权图的最短路径则一定是经过顶点最少的路径。以下图为例，$v_1 -&gt; v_4 -&gt; v_6$与$v_1 -&gt; v_4 -&gt; v_7 -&gt; v_6$相比，第二条路径要更短一点。<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_2.png" alt="Graph_1" title="Graph_1"><br>同样，当图内存在负权值的边时，就可能产生<strong>负值圈（Negative-cost cycle）</strong>，如下图：<br><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_3.png" alt="Graph_2" title="Graph_2"><br>此时单源最短路径的算法是无法得到正确结果的，这里不深入讨论这类问题。</p>
 <p>回过头来，有权图的单源最短路径算法与无权图的单源最短路算法有一个共同点，那就是二者皆是按照递增的顺序找出到各个顶点的最短路径，而有权图的单源最短路径算法也叫<strong>Dijkstra算法</strong>。</p>
 <h2 id="Dijkstra-算法"><a href="#Dijkstra-算法" class="headerlink" title="Dijkstra 算法"></a>Dijkstra 算法</h2><p>Dijkstra 算法是典型的<strong><a href="https://baike.baidu.com/item/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/5411800?fr=aladdin" target="_blank" rel="noopener">贪心算法</a></strong>，直接描述其过程有点麻烦，先看下面的伪码算法描述：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(Vertex S)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>) &#123;</span><br><span class="line">		v = 未收录顶点中 dist 最小者;</span><br><span class="line">		<span class="keyword">if</span>(这样的 v 不存在) <span class="keyword">break</span>;</span><br><span class="line">		collected[v] = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(v 的每个邻接点 w)&#123;</span><br><span class="line">			<span class="keyword">if</span>(collected[w] == <span class="literal">false</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(dist[v] + &lt;v, w&gt;的权值 &lt; dist[w]) &#123;</span><br><span class="line">					dist[w] = dist[v] + &lt;v, w&gt;的权值;</span><br><span class="line">					path[w] = v;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>需要注意的地方：</p>
@@ -626,7 +626,7 @@
 <li>如果是将 dist 存在最小堆中，那么找出所有顶点中 dist 最小的顶点所耗费的时间就是$O(log|V|)$，但是最后还得将这个值插入到堆中，且对于一个连通的图而言，边数肯定大于等于顶点数，所以其时间复杂度为：$T = O(|V|log|V| + |E|log|V|) = O(|E|log|V|)$，这种方法适合稀疏图</li>
 </ol>
 <p>下面再以下图中的图为例，手动模拟一遍算法。</p>
-<p><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_3.png" alt="Graph_3" title="Graph_3"></p>
+<p><img src="/my_photo_gallery/ZJU_DS_7/ZJU_DS_7_4.png" alt="Graph_3" title="Graph_3"></p>
 <p>首先，dist 和 path 数组都要先初始化：</p>
 <table>
 <thead>
@@ -1279,7 +1279,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">462k</span>
+    <span title="站点总字数">465k</span>
   
 
   
@@ -1290,7 +1290,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">64:06</span>
+    <span title="站点阅读时长">64:32</span>
   
 </div>
 
