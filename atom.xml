@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-02T12:57:50.166Z</updated>
+  <updated>2020-09-03T15:32:44.113Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ZJU_DS_09_排序（上）</title>
+    <link href="http://bachzart.github.io/2020/09/02/ZJU-DS-09-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://bachzart.github.io/2020/09/02/ZJU-DS-09-排序（上）/</id>
+    <published>2020-09-02T13:03:54.000Z</published>
+    <updated>2020-09-03T15:32:44.113Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本周将会介绍几种简单的排序算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+    
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
+    
+  </entry>
   
   <entry>
     <title>ZJU_DS_08-图（下）</title>
@@ -458,28 +482,6 @@
     
     
       <category term="Static BGP" scheme="http://bachzart.github.io/tags/Static-BGP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BFD基础配置方法</title>
-    <link href="http://bachzart.github.io/2019/03/29/BFD%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/"/>
-    <id>http://bachzart.github.io/2019/03/29/BFD基础配置方法/</id>
-    <published>2019-03-29T06:31:05.000Z</published>
-    <updated>2019-05-24T14:39:37.007Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;&lt;code&gt;BFD&lt;/code&gt;常用于多线静态路由的检测和自动切换，在没有使用其他动态协议的情况下，若网络出现故障，可以使用BFD达到故障线路和正常线路的路由切换效果。当然，&lt;code&gt;BFD&lt;/code&gt;依然可以和其他协议配合使用（MPLS也可以），这里只介绍&lt;code&gt;BFD&lt;/code&gt;和静态路由的配合使用，在不同的应用场景内把握好BFD本身的作用机制，从而达到使用者想要达到的效果即可。&lt;br&gt;另外，一般的动态协议收敛速度比较慢，为秒级，&lt;code&gt;BFD&lt;/code&gt;可以将收敛时间降低到毫秒级。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Networking" scheme="http://bachzart.github.io/categories/Networking/"/>
-    
-      <category term="Routing" scheme="http://bachzart.github.io/categories/Networking/Routing/"/>
-    
-    
-      <category term="BFD" scheme="http://bachzart.github.io/tags/BFD/"/>
     
   </entry>
   
