@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-04T15:56:18.698Z</updated>
+  <updated>2020-09-05T15:41:17.659Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -17,16 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ZJU_DS_09_排序（上）</title>
-    <link href="http://bachzart.github.io/2020/09/02/ZJU-DS-09-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
-    <id>http://bachzart.github.io/2020/09/02/ZJU-DS-09-排序（上）/</id>
-    <published>2020-09-02T13:03:54.000Z</published>
-    <updated>2020-09-04T15:56:18.698Z</updated>
+    <title>ZJU_DS_10-排序（下）</title>
+    <link href="http://bachzart.github.io/2020/09/05/ZJU-DS-10-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>http://bachzart.github.io/2020/09/05/ZJU-DS-10-排序（下）/</id>
+    <published>2020-09-05T08:43:05.000Z</published>
+    <updated>2020-09-05T15:41:17.659Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本周将会介绍几种简单的排序算法。&lt;/p&gt;
+&lt;p&gt;本周继续介绍排序算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+    
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZJU_DS_09_排序（上）</title>
+    <link href="http://bachzart.github.io/2020/09/02/ZJU-DS-09-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://bachzart.github.io/2020/09/02/ZJU-DS-09-排序（上）/</id>
+    <published>2020-09-02T13:03:54.000Z</published>
+    <updated>2020-09-05T09:53:41.433Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本周将会介绍几种常见的排序算法。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -460,28 +484,6 @@
       <category term="Jottings" scheme="http://bachzart.github.io/tags/Jottings/"/>
     
       <category term="Interior Finish" scheme="http://bachzart.github.io/tags/Interior-Finish/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>奇葩的国内BGP业务架构</title>
-    <link href="http://bachzart.github.io/2019/04/09/%E5%A5%87%E8%91%A9%E7%9A%84%E5%9B%BD%E5%86%85BGP%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
-    <id>http://bachzart.github.io/2019/04/09/奇葩的国内BGP业务架构/</id>
-    <published>2019-04-09T03:40:35.000Z</published>
-    <updated>2019-05-27T00:56:44.723Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;国内存在BGP业务，但是实际上并不是严格意义上的BGP，而是通过模拟来构建的“静态BGP”；之所以是这样的情况，原因是运营商和政策…打住，扯远了，我什么都不知道🤫。&lt;br&gt;反正客户需要就做😂，本着先做先完事，隐患日后再说的原则（笑ing），好歹算是捯饬出来一个。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Networking" scheme="http://bachzart.github.io/categories/Networking/"/>
-    
-      <category term="Routing" scheme="http://bachzart.github.io/categories/Networking/Routing/"/>
-    
-    
-      <category term="Static BGP" scheme="http://bachzart.github.io/tags/Static-BGP/"/>
     
   </entry>
   
