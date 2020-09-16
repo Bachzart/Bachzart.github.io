@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-08T15:14:00.148Z</updated>
+  <updated>2020-09-16T14:50:52.923Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown 语法快速指南</title>
+    <link href="http://bachzart.github.io/2020/09/16/Markdown-%E8%AF%AD%E6%B3%95%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97/"/>
+    <id>http://bachzart.github.io/2020/09/16/Markdown-语法快速指南/</id>
+    <published>2020-09-16T11:20:53.000Z</published>
+    <updated>2020-09-16T14:50:52.923Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有关 &lt;a href=&quot;https://baike.baidu.com/item/markdown/3245829?fr=aladdin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt; 的概念性问题，请点击链接自行查看。本文旨在整理一些平时写文档时常用的一些语法，这样既方便他人查看，也以免自己忘记。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://bachzart.github.io/categories/Tools/"/>
+    
+      <category term="Markdown" scheme="http://bachzart.github.io/categories/Tools/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="http://bachzart.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZJU_DS_Summary</title>
+    <link href="http://bachzart.github.io/2020/09/16/ZJU-DS-Summary/"/>
+    <id>http://bachzart.github.io/2020/09/16/ZJU-DS-Summary/</id>
+    <published>2020-09-16T09:02:53.000Z</published>
+    <updated>2020-09-16T12:16:00.956Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;center&gt;课堂笔记全部写完了，总结一下。&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+    
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
+    
+      <category term="Jottings" scheme="http://bachzart.github.io/tags/Jottings/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZJU_DS_12-KMP</title>
+    <link href="http://bachzart.github.io/2020/09/15/ZJU-DS-12-KMP/"/>
+    <id>http://bachzart.github.io/2020/09/15/ZJU-DS-12-KMP/</id>
+    <published>2020-09-15T15:54:36.000Z</published>
+    <updated>2020-09-15T17:27:52.833Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本周主要讲解几道题目，然后再介绍一下 KMP 算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+    
+    
+      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
+    
+  </entry>
   
   <entry>
     <title>ZJU_DS_11-散列查找</title>
@@ -381,7 +451,7 @@
     <link href="http://bachzart.github.io/2019/06/23/Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97/"/>
     <id>http://bachzart.github.io/2019/06/23/Git简易指南/</id>
     <published>2019-06-23T14:57:49.000Z</published>
-    <updated>2019-07-09T16:16:38.068Z</updated>
+    <updated>2020-09-16T11:24:39.788Z</updated>
     
     <summary type="html">
     
@@ -390,9 +460,9 @@
     
     </summary>
     
-      <category term="Software" scheme="http://bachzart.github.io/categories/Software/"/>
+      <category term="Tools" scheme="http://bachzart.github.io/categories/Tools/"/>
     
-      <category term="Git" scheme="http://bachzart.github.io/categories/Software/Git/"/>
+      <category term="Git" scheme="http://bachzart.github.io/categories/Tools/Git/"/>
     
     
       <category term="Git" scheme="http://bachzart.github.io/tags/Git/"/>
@@ -418,72 +488,6 @@
     
     
       <category term="Prime Number" scheme="http://bachzart.github.io/tags/Prime-Number/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>雨夜杂思</title>
-    <link href="http://bachzart.github.io/2019/05/30/%E9%9B%A8%E5%A4%9C%E6%9D%82%E6%80%9D/"/>
-    <id>http://bachzart.github.io/2019/05/30/雨夜杂思/</id>
-    <published>2019-05-29T16:18:35.000Z</published>
-    <updated>2019-06-14T17:05:49.326Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;是夜，窗外的雨声淅淅沥沥的下着，心里想着自己这段时间的生活，不由得有了些感慨，毕竟又是一年逝去了。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Life" scheme="http://bachzart.github.io/categories/Life/"/>
-    
-      <category term="Jottings" scheme="http://bachzart.github.io/categories/Life/Jottings/"/>
-    
-    
-      <category term="Jottings" scheme="http://bachzart.github.io/tags/Jottings/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言常用库函数</title>
-    <link href="http://bachzart.github.io/2019/05/24/C%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/"/>
-    <id>http://bachzart.github.io/2019/05/24/C语言常用库函数/</id>
-    <published>2019-05-24T14:54:12.000Z</published>
-    <updated>2019-07-09T16:14:29.992Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;最近发现一个问题，做题的时候，不管有的没的，要用的函数全靠自己写，写来写去也懒得去管到底有没有那个库函数了…这样不太好，日后还不是得把自己累死，还是得善于利用东西才行（又为自己偷懒找借口🤣）。于是，这篇文章就用来记录&lt;code&gt;C&lt;/code&gt;中常用的一些库函数，以免日后又忘记了。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Programming" scheme="http://bachzart.github.io/categories/Programming/"/>
-    
-      <category term="C/C++" scheme="http://bachzart.github.io/categories/Programming/C-C/"/>
-    
-    
-      <category term="C/C++" scheme="http://bachzart.github.io/tags/C-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言里爬过的“坑”</title>
-    <link href="http://bachzart.github.io/2019/05/16/C%E8%AF%AD%E8%A8%80%E9%87%8C%E7%88%AC%E8%BF%87%E7%9A%84%E5%9D%91/"/>
-    <id>http://bachzart.github.io/2019/05/16/C语言里爬过的坑/</id>
-    <published>2019-05-16T13:53:31.000Z</published>
-    <updated>2019-09-10T08:44:12.501Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;那是一个下着大雨的夜晚，室外急促的雨声正好映衬着室内紧张的气氛，快，只剩下最后一个&lt;code&gt;BUG&lt;/code&gt;了！终于在大半个小时之后解决了，仔细一看，原来是之前碰到过一次的问题了...心中不免想到，要是上次有好好记录就好了。于是，就动了整理这篇Blog的心思啦~&lt;br&gt;此Blog会&lt;strong&gt;长期不定时更新&lt;/strong&gt;，记录下自己在跟老爷子&lt;code&gt;C&lt;/code&gt;玩耍的过程中，碰到的一些坑爹之处（菜请轻喷，嘿嘿）~&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Programming" scheme="http://bachzart.github.io/categories/Programming/"/>
-    
-      <category term="C/C++" scheme="http://bachzart.github.io/categories/Programming/C-C/"/>
-    
-    
-      <category term="C/C++" scheme="http://bachzart.github.io/tags/C-C/"/>
     
   </entry>
   
