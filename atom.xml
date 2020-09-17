@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-16T14:50:52.923Z</updated>
+  <updated>2020-09-17T14:48:21.391Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MathJax 语法快速指南</title>
+    <link href="http://bachzart.github.io/2020/09/17/MathJax-%E8%AF%AD%E6%B3%95%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97/"/>
+    <id>http://bachzart.github.io/2020/09/17/MathJax-语法快速指南/</id>
+    <published>2020-09-17T10:28:45.000Z</published>
+    <updated>2020-09-17T14:48:21.391Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MathJax 是一个 JavaScript 库，可以让你直接用 Latex 语法来书写数学公式，十分方便。&lt;br&gt;想深入了解 MathJax，点击链接：&lt;a href=&quot;https://mathjax-chinese-doc.readthedocs.io/en/latest/mathjax.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MathJax&lt;/a&gt;，本文旨在整理一些平时写文档时常用的一些语法，便于复查。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://bachzart.github.io/categories/Tools/"/>
+    
+      <category term="MathJax" scheme="http://bachzart.github.io/categories/Tools/MathJax/"/>
+    
+    
+      <category term="MathJax" scheme="http://bachzart.github.io/tags/MathJax/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown 语法快速指南</title>
     <link href="http://bachzart.github.io/2020/09/16/Markdown-%E8%AF%AD%E6%B3%95%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97/"/>
     <id>http://bachzart.github.io/2020/09/16/Markdown-语法快速指南/</id>
     <published>2020-09-16T11:20:53.000Z</published>
-    <updated>2020-09-16T14:50:52.923Z</updated>
+    <updated>2020-09-17T14:48:10.844Z</updated>
     
     <summary type="html">
     
@@ -187,12 +209,12 @@
     <link href="http://bachzart.github.io/2020/08/29/Prologue%EF%BC%88%E3%83%97%E3%83%AD%E3%83%AD%E3%83%BC%E3%82%B0%20-%20%E6%8A%BC%E5%B0%BE%E3%82%B3%E3%83%BC%E3%82%BF%E3%83%AD%E3%83%BC%EF%BC%89-%20%E7%BF%BB%E5%BC%B9/"/>
     <id>http://bachzart.github.io/2020/08/29/Prologue（プロローグ - 押尾コータロー）- 翻弹/</id>
     <published>2020-08-29T08:59:19.000Z</published>
-    <updated>2020-08-30T12:38:34.095Z</updated>
+    <updated>2020-09-17T13:26:36.012Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;Prologue（プロローグ - 押尾コータロー）是押尾于 2003 年发行的《Dramatic》专辑中的一首较为简单的指弹曲子。&lt;/p&gt;
+&lt;p&gt;Prologue（プロローグ - 押尾コータロー）是押尾于 2003 年发行的专辑《Dramatic》中的一首较为简单的指弹曲子。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -239,7 +261,7 @@
     <link href="http://bachzart.github.io/2020/08/27/ZJU-DS-06-%E5%9B%BE%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/27/ZJU-DS-06-图（上）/</id>
     <published>2020-08-27T12:23:26.000Z</published>
-    <updated>2020-08-28T12:09:16.267Z</updated>
+    <updated>2020-09-17T13:27:50.871Z</updated>
     
     <summary type="html">
     
@@ -466,28 +488,6 @@
     
     
       <category term="Git" scheme="http://bachzart.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>素数的求法</title>
-    <link href="http://bachzart.github.io/2019/06/21/%E7%B4%A0%E6%95%B0%E7%9A%84%E6%B1%82%E6%B3%95/"/>
-    <id>http://bachzart.github.io/2019/06/21/素数的求法/</id>
-    <published>2019-06-21T14:31:04.000Z</published>
-    <updated>2019-07-24T10:57:28.622Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h1&gt;&lt;p&gt;介绍如何求素数之前，首先得明白素数是什么？所谓素数（也叫质数），是指&lt;strong&gt;大于1，且只能被1和其本身整除的数&lt;/strong&gt;（此定义与&lt;strong&gt;合数&lt;/strong&gt;的定义相对）。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
-    
-      <category term="Math" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/Math/"/>
-    
-    
-      <category term="Prime Number" scheme="http://bachzart.github.io/tags/Prime-Number/"/>
     
   </entry>
   
