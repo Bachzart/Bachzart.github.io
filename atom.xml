@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-17T14:48:21.391Z</updated>
+  <updated>2020-09-21T06:28:51.967Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nand2Tetris_01</title>
+    <link href="http://bachzart.github.io/2020/09/20/Nand2Tetris-01/"/>
+    <id>http://bachzart.github.io/2020/09/20/Nand2Tetris-01/</id>
+    <published>2020-09-20T12:55:41.000Z</published>
+    <updated>2020-09-21T06:28:51.967Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.nand2tetris.org/project01&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Nand2Tetris&lt;/a&gt; 是由希伯来大学的两位教授 Noam Nisan 和 Shimon Schocken 在 Coursera 上开设的在线课程（网络课程）。课程全称叫做：依据基本原理构建现代计算机：从与非门到俄罗斯方块（基于项目的课程），其主要内容与计算机组成原理、操作系统等科目的关联性较大，但课程的受众群体也不止局限于专业人士，且课程的实践性很强，对深入理解理论知识很有帮助。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
+    
+      <category term="Computer Organization" scheme="http://bachzart.github.io/categories/CS/Computer-Organization/"/>
+    
+    
+      <category term="Nand2Tetris" scheme="http://bachzart.github.io/tags/Nand2Tetris/"/>
+    
+  </entry>
   
   <entry>
     <title>MathJax 语法快速指南</title>
@@ -65,7 +87,7 @@
     <link href="http://bachzart.github.io/2020/09/16/ZJU-DS-Summary/"/>
     <id>http://bachzart.github.io/2020/09/16/ZJU-DS-Summary/</id>
     <published>2020-09-16T09:02:53.000Z</published>
-    <updated>2020-09-16T12:16:00.956Z</updated>
+    <updated>2020-09-20T13:29:46.942Z</updated>
     
     <summary type="html">
     
@@ -73,9 +95,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -89,7 +111,7 @@
     <link href="http://bachzart.github.io/2020/09/15/ZJU-DS-12-KMP/"/>
     <id>http://bachzart.github.io/2020/09/15/ZJU-DS-12-KMP/</id>
     <published>2020-09-15T15:54:36.000Z</published>
-    <updated>2020-09-15T17:27:52.833Z</updated>
+    <updated>2020-09-21T06:26:07.613Z</updated>
     
     <summary type="html">
     
@@ -99,9 +121,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -113,7 +135,7 @@
     <link href="http://bachzart.github.io/2020/09/06/ZJU-DS-11-%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE/"/>
     <id>http://bachzart.github.io/2020/09/06/ZJU-DS-11-散列查找/</id>
     <published>2020-09-06T02:41:45.000Z</published>
-    <updated>2020-09-08T15:14:00.148Z</updated>
+    <updated>2020-09-20T13:30:17.172Z</updated>
     
     <summary type="html">
     
@@ -123,9 +145,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -137,7 +159,7 @@
     <link href="http://bachzart.github.io/2020/09/05/ZJU-DS-10-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/09/05/ZJU-DS-10-排序（下）/</id>
     <published>2020-09-05T08:43:05.000Z</published>
-    <updated>2020-09-05T15:41:17.659Z</updated>
+    <updated>2020-09-20T13:30:23.868Z</updated>
     
     <summary type="html">
     
@@ -147,9 +169,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -161,7 +183,7 @@
     <link href="http://bachzart.github.io/2020/09/02/ZJU-DS-09-%E6%8E%92%E5%BA%8F%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/09/02/ZJU-DS-09-排序（上）/</id>
     <published>2020-09-02T13:03:54.000Z</published>
-    <updated>2020-09-05T09:53:41.433Z</updated>
+    <updated>2020-09-20T13:30:27.606Z</updated>
     
     <summary type="html">
     
@@ -171,9 +193,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -185,7 +207,7 @@
     <link href="http://bachzart.github.io/2020/08/31/ZJU-DS-08-%E5%9B%BE%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/31/ZJU-DS-08-图（下）/</id>
     <published>2020-08-31T04:07:25.000Z</published>
-    <updated>2020-09-02T12:57:50.166Z</updated>
+    <updated>2020-09-20T13:30:32.533Z</updated>
     
     <summary type="html">
     
@@ -195,9 +217,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -237,7 +259,7 @@
     <link href="http://bachzart.github.io/2020/08/28/ZJU-DS-07-%E5%9B%BE%EF%BC%88%E4%B8%AD%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/28/ZJU-DS-07-图（中）/</id>
     <published>2020-08-28T12:10:40.000Z</published>
-    <updated>2020-09-01T13:34:10.511Z</updated>
+    <updated>2020-09-20T13:30:37.409Z</updated>
     
     <summary type="html">
     
@@ -247,9 +269,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -261,7 +283,7 @@
     <link href="http://bachzart.github.io/2020/08/27/ZJU-DS-06-%E5%9B%BE%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/08/27/ZJU-DS-06-图（上）/</id>
     <published>2020-08-27T12:23:26.000Z</published>
-    <updated>2020-09-17T13:27:50.871Z</updated>
+    <updated>2020-09-20T13:30:41.155Z</updated>
     
     <summary type="html">
     
@@ -271,9 +293,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -307,7 +329,7 @@
     <link href="http://bachzart.github.io/2020/05/03/ZJU-DS-05-%E6%A0%91%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/05/03/ZJU-DS-05-树（下）/</id>
     <published>2020-05-03T09:50:43.000Z</published>
-    <updated>2020-08-26T13:16:55.860Z</updated>
+    <updated>2020-09-20T13:30:44.492Z</updated>
     
     <summary type="html">
     
@@ -317,9 +339,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -353,7 +375,7 @@
     <link href="http://bachzart.github.io/2020/05/01/ZJU-DS-04-%E6%A0%91%EF%BC%88%E4%B8%AD%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/05/01/ZJU-DS-04-树（中）/</id>
     <published>2020-05-01T06:05:48.000Z</published>
-    <updated>2020-05-01T09:04:41.538Z</updated>
+    <updated>2020-09-20T13:30:48.309Z</updated>
     
     <summary type="html">
     
@@ -363,9 +385,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -377,7 +399,7 @@
     <link href="http://bachzart.github.io/2020/04/01/ZJU-DS-03-%E6%A0%91%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
     <id>http://bachzart.github.io/2020/04/01/ZJU-DS-03-树（上）/</id>
     <published>2020-04-01T04:26:20.000Z</published>
-    <updated>2020-05-01T09:04:42.708Z</updated>
+    <updated>2020-09-20T13:30:51.253Z</updated>
     
     <summary type="html">
     
@@ -387,9 +409,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -401,7 +423,7 @@
     <link href="http://bachzart.github.io/2020/02/12/ZJU-DS-02-%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/"/>
     <id>http://bachzart.github.io/2020/02/12/ZJU-DS-02-线性结构/</id>
     <published>2020-02-12T06:54:39.000Z</published>
-    <updated>2020-05-01T08:02:04.384Z</updated>
+    <updated>2020-09-20T13:30:54.586Z</updated>
     
     <summary type="html">
     
@@ -411,9 +433,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -425,7 +447,7 @@
     <link href="http://bachzart.github.io/2020/02/11/ZJU-DS-01-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
     <id>http://bachzart.github.io/2020/02/11/ZJU-DS-01-基本概念/</id>
     <published>2020-02-11T08:43:11.000Z</published>
-    <updated>2020-05-01T08:01:55.633Z</updated>
+    <updated>2020-09-20T13:29:29.734Z</updated>
     
     <summary type="html">
     
@@ -435,9 +457,9 @@
     
     </summary>
     
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/"/>
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
     
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/categories/Data-Structures-and-Algorithms/ZJU-DS/"/>
+      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
@@ -465,29 +487,6 @@
       <category term="C/C++" scheme="http://bachzart.github.io/tags/C-C/"/>
     
       <category term="PTA" scheme="http://bachzart.github.io/tags/PTA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git简易指南</title>
-    <link href="http://bachzart.github.io/2019/06/23/Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97/"/>
-    <id>http://bachzart.github.io/2019/06/23/Git简易指南/</id>
-    <published>2019-06-23T14:57:49.000Z</published>
-    <updated>2020-09-16T11:24:39.788Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 是一个开源的分布式版本控制系统，而 &lt;strong&gt;Github&lt;/strong&gt; 则是目前全球最大的开源社区，那么何谓&lt;strong&gt;“版本控制”&lt;/strong&gt;？&lt;br&gt;&lt;strong&gt;版本控制&lt;/strong&gt;是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统，使用&lt;code&gt;Git&lt;/code&gt;可以对&lt;strong&gt;任何类型&lt;/strong&gt;的文件进行版本控制。&lt;/p&gt;
-&lt;p&gt;不同于&lt;strong&gt;本地版本控制系统&lt;/strong&gt;和&lt;strong&gt;集中式版本控制系统&lt;/strong&gt;，&lt;strong&gt;分布式版本控制系统&lt;/strong&gt;的优点在于其对文件丢失风险的规避能力。简而言之，分布式版本控制系统中的每个客户端，都具有完整的文件，即原始仓库的&lt;strong&gt;镜像&lt;/strong&gt;。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://bachzart.github.io/categories/Tools/"/>
-    
-      <category term="Git" scheme="http://bachzart.github.io/categories/Tools/Git/"/>
-    
-    
-      <category term="Git" scheme="http://bachzart.github.io/tags/Git/"/>
     
   </entry>
   
