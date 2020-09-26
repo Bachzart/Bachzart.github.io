@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bachzart.github.io/"/>
-  <updated>2020-09-21T06:28:51.967Z</updated>
+  <updated>2020-09-26T15:12:48.360Z</updated>
   <id>http://bachzart.github.io/</id>
   
   <author>
@@ -17,11 +17,55 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Nand2Tetris_01</title>
-    <link href="http://bachzart.github.io/2020/09/20/Nand2Tetris-01/"/>
-    <id>http://bachzart.github.io/2020/09/20/Nand2Tetris-01/</id>
+    <title>扒谱记录 - Homesteaders</title>
+    <link href="http://bachzart.github.io/2020/09/26/%E6%89%92%E8%B0%B1%E8%AE%B0%E5%BD%95-Homesteaders/"/>
+    <id>http://bachzart.github.io/2020/09/26/扒谱记录-Homesteaders/</id>
+    <published>2020-09-26T14:27:13.000Z</published>
+    <updated>2020-09-26T15:12:48.360Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;《Homesteaders》是由 Joanie Madden 用&lt;strong&gt;哨笛&lt;/strong&gt;演奏的一首凯尔特风格的曲子，是一首十分纯净的轻音乐。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="http://bachzart.github.io/categories/Life/"/>
+    
+      <category term="Hobby" scheme="http://bachzart.github.io/categories/Life/Hobby/"/>
+    
+    
+      <category term="Music" scheme="http://bachzart.github.io/tags/Music/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nand2Tetris_Part1_02</title>
+    <link href="http://bachzart.github.io/2020/09/21/Nand2Tetris-Part1-02/"/>
+    <id>http://bachzart.github.io/2020/09/21/Nand2Tetris-Part1-02/</id>
+    <published>2020-09-21T15:16:04.000Z</published>
+    <updated>2020-09-22T05:20:50.567Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本周的主题是 &lt;strong&gt;Boolean Arithmetic and the ALU Roadmap&lt;/strong&gt;，旨在介绍如何构建加法器（adder）和算术逻辑单元（Arithmetic Logic Unit，ALU），学习路线依然还是从简单到复杂。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
+    
+      <category term="Computer Organization" scheme="http://bachzart.github.io/categories/CS/Computer-Organization/"/>
+    
+    
+      <category term="Nand2Tetris" scheme="http://bachzart.github.io/tags/Nand2Tetris/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nand2Tetri_Part1_01</title>
+    <link href="http://bachzart.github.io/2020/09/20/Nand2Tetris-Part1-01/"/>
+    <id>http://bachzart.github.io/2020/09/20/Nand2Tetris-Part1-01/</id>
     <published>2020-09-20T12:55:41.000Z</published>
-    <updated>2020-09-21T06:28:51.967Z</updated>
+    <updated>2020-09-22T03:52:45.937Z</updated>
     
     <summary type="html">
     
@@ -439,54 +483,6 @@
     
     
       <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ZJU_DS_01-基本概念</title>
-    <link href="http://bachzart.github.io/2020/02/11/ZJU-DS-01-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>http://bachzart.github.io/2020/02/11/ZJU-DS-01-基本概念/</id>
-    <published>2020-02-11T08:43:11.000Z</published>
-    <updated>2020-09-20T13:29:29.734Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;此篇博文是博主自己在 MOOC 上自学浙江大学数据结构课程时的笔记，每一讲都有对应的笔记，对应一篇博文。虽然之前上课时就做好了笔记，但对很多知识点的理解比较浅显，现在回过头来整理，希望会有所启发。另外，自学之路难免会有错误，欢迎看到文章的同学不吝赐教。另外，题解代码在 Github 上的地址：&lt;a href=&quot;https://github.com/Bachzart/PTA_Practice/tree/master/201909_MOOC_DS_ChenYue&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;201909_MOOC_DS_ChenYue&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="CS" scheme="http://bachzart.github.io/categories/CS/"/>
-    
-      <category term="Data Structures and Algorithms" scheme="http://bachzart.github.io/categories/CS/Data-Structures-and-Algorithms/"/>
-    
-    
-      <category term="ZJU_DS" scheme="http://bachzart.github.io/tags/ZJU-DS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAT (Advanced Level) Practice</title>
-    <link href="http://bachzart.github.io/2019/06/30/PAT-Advanced-Level-Practice/"/>
-    <id>http://bachzart.github.io/2019/06/30/PAT-Advanced-Level-Practice/</id>
-    <published>2019-06-30T07:46:09.000Z</published>
-    <updated>2020-08-28T11:10:28.095Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h1&gt;&lt;p&gt;从入门到入土系列之 &lt;strong&gt;PAT 甲级&lt;/strong&gt; 题库快乐🤣启动。&lt;br&gt;长期更新ing~&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Programming" scheme="http://bachzart.github.io/categories/Programming/"/>
-    
-      <category term="PTA" scheme="http://bachzart.github.io/categories/Programming/PTA/"/>
-    
-    
-      <category term="C/C++" scheme="http://bachzart.github.io/tags/C-C/"/>
-    
-      <category term="PTA" scheme="http://bachzart.github.io/tags/PTA/"/>
     
   </entry>
   
